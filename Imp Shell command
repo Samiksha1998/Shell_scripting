@@ -1,0 +1,27 @@
+Shell command
+
+#-----to install cron----#
+
+sudo apt update
+sudo apt install cron
+
+sudo systemctl status cron-----> to check the cron job is running
+
+sudo systemctl enable cron
+sudo systemctl start cron
+
+#------to get mail-----#
+sudo apt update
+sudo apt install mailutils
+
+#----Cronjob------#
+
+MAILTO="samikshad98@yahoo.com"
+*/1 * * * * /home/ubuntu/montoring.sh >> /home/ubuntu/system_report.log 2>&1
+
+#----to check  why mail is not coming-----#
+
+mailq---->inspect the mail queue:
+outcome => Connection timed out
+Relay access denied
+Authentication failed
